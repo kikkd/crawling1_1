@@ -1,12 +1,14 @@
-import requests
+import requests as req
 
-res = requests.get("https://www.naver.com/")
+### IP 주소 알아보기
+### https://api.ipify.org/ -> 내 IP알 수 있는 url
+
+res = req.get("https://api.ipify.org/", headers={"fast":"campus"})
+print(res.status_code) #200
 print(res.text)
 
-## get : 요청
-## set : 생성
-## put : 수정
-## delete : 삭제
+print(res.request.method)
+print(res.request.headers)
 
-### GET / HTML1.1
-### Host : https://www.naver.com/
+print(res.elapsed) # 실행시간
+print(res.raw) #바이트값을 보여줌 -> 바이트는 이미자나 동영상등 글로 표현 못하는 데이터를 바이트값을 이용해 사용함
