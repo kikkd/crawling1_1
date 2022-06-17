@@ -13,3 +13,4 @@ pos1 = '<span class="value">'
 pos2 = "</span>"
 s = html.split(pos1)[1].split(pos2)[0]
 print(s)
+
