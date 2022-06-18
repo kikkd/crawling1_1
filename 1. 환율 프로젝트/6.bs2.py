@@ -1,5 +1,4 @@
 from pickle import TRUE
-from re import S
 import requests as req
 from bs4 import BeautifulSoup as BS
 
